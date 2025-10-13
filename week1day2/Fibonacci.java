@@ -23,13 +23,12 @@ public class Fibonacci {
 	}
 
 	public static void main(String[] args) {
-		Fibonacci fs = new Fibonacci();
 		
 		int n = 8;
 
 		System.out.println("Fibonacci series up to "+n+"th term:");
 		for (int i = 0; i <= n; i++) {
-			System.out.print(fs.FibonacciSeries(i) + " ");
+			System.out.print(FibonacciSeries(i) + " ");
 		}
 	}
 
