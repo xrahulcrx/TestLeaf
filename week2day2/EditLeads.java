@@ -1,4 +1,5 @@
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -55,6 +56,14 @@ public class EditLeads {
 			driver.findElement(By.xpath("//textarea[@name='description']")).sendKeys("Create Lead to Edit data in the HR");
 			
 			
+			//using keys control to add phone number for delete lead
+			driver.findElement(By.id("createLeadForm_primaryPhoneCountryCode")).sendKeys(Keys.CONTROL + "a", Keys.DELETE);
+			driver.findElement(By.id("createLeadForm_primaryPhoneCountryCode")).sendKeys("9");
+			driver.findElement(By.id("createLeadForm_primaryPhoneAreaCode")).sendKeys("1");
+			driver.findElement(By.id("createLeadForm_primaryPhoneNumber")).sendKeys("979097");
+			
+			
+			
 			driver.findElement(By.id("createLeadForm_primaryEmail")).sendKeys("rahulcr5537@gmail.com");
 			
 			WebElement SourceSel = driver.findElement(By.id("createLeadForm_generalStateProvinceGeoId"));
@@ -62,6 +71,8 @@ public class EditLeads {
 			Select sel1 = new Select(SourceSel);
 			
 			sel1.selectByVisibleText("New York");
+			
+
 			
 			driver.findElement(By.xpath("//input[@class='smallSubmit']")).click();
 			
@@ -87,7 +98,7 @@ public class EditLeads {
 			
 			driver.close();
 			
-			
+
 		}
 		
 }
