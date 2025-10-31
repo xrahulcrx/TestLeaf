@@ -5,7 +5,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 public class FacebookLogin {
 
 	public static void main(String[] args) throws InterruptedException {
-		// TODO Auto-generated method stub
+		//Chrome Initialize
 		
 		
 		ChromeOptions options = new  ChromeOptions();
@@ -13,6 +13,8 @@ public class FacebookLogin {
 
 		
 		ChromeDriver driver = new ChromeDriver(options);
+
+		//facebook login
 		
 		driver.get("https:www.facebook.com");
 		driver.manage().window().maximize();
@@ -20,6 +22,8 @@ public class FacebookLogin {
 		driver.findElement(By.id("email")).sendKeys("testleaf.2023@gmail.com");
 		driver.findElement(By.id("pass")).sendKeys("Tuna@321");
 		driver.findElement(By.name("login")).click();
+
+		//get title
 		
 		System.out.println(driver.getTitle());
 		Thread.sleep(5000);
