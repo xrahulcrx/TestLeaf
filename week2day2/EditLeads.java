@@ -1,3 +1,5 @@
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -76,7 +78,7 @@ public class EditLeads {
 			
 			driver.findElement(By.xpath("//input[@class='smallSubmit']")).click();
 			
-			Thread.sleep(6000);
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 			
 			driver.findElement(By.linkText("Edit")).click();
 			
@@ -94,7 +96,7 @@ public class EditLeads {
 			
 			System.out.println(driver.getTitle());
 			
-			Thread.sleep(5*1000);
+			Thread.sleep(3*1000);
 			
 			driver.close();
 			
