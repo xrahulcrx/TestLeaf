@@ -13,7 +13,7 @@ public class RemoveDupeString {
 			for(int j = i +1; j < words.length ; j++) {
 				
 				if(words[i].equalsIgnoreCase(words[j])) {
-					words[j] = " ";
+					words[j] = "";
 					count++;
 				}
 				
